@@ -72,7 +72,9 @@ pub mod lang {
     }
 
     /// Convert a `Title.language` wire enum back to its supported code.
-    /// Enum 8 is intentionally unsupported until the API identifies it.
+    /// Enum 8 is ITALIAN in the official app's proto (jadx
+    /// LanguagesOuterClass); MANGA Plus runs no Italian catalog, so it
+    /// stays unsupported.
     pub fn from_wire_enum(value: i32) -> Option<&'static str> {
         match value {
             0 => Some(ENGLISH),

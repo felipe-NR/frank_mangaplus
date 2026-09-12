@@ -802,7 +802,8 @@ fn warn_unknown_language_once(lang: i32) {
 /// changing either side without the other will silently misfilter.
 /// Returned as i32 because that's how prost generates Title.language.
 /// Values were confirmed against live search, detail, and reader responses;
-/// enum 8 remains intentionally unsupported until the API identifies it.
+/// enum 8 is ITALIAN in the official app's proto, but MANGA Plus runs no
+/// Italian catalog, so it stays unsupported.
 ///
 /// Input is normalized case-insensitively and unsupported values fall
 /// back to English.

@@ -46,8 +46,8 @@ export function contentLanguagesInNavbarOrder(
 
 // Derived from CONTENT_LANGUAGES so the frontend declares each wire value
 // exactly once. Rust fixture tests independently verify the corresponding
-// API map against captured protobuf responses. Enum 8 remains intentionally
-// unmapped until the API identifies it.
+// API map against captured protobuf responses. Enum 8 is ITALIAN in the
+// official app's proto; there is no Italian catalog, so it stays unmapped.
 const LANG_ENUM_TO_CODE = new Map<number, ContentLanguage>(
   CONTENT_LANGUAGES.map(language => [language.wireEnum, language.code]),
 );
